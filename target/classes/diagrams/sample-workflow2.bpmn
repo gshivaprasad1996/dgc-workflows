@@ -21,6 +21,9 @@
     <sequenceFlow id="flow2" sourceRef="scripttask1" targetRef="endevent1"></sequenceFlow>
     <userTask id="usertask1" name="User Task" activiti:candidateUsers="user(${startUser})">
       <documentation>User form </documentation>
+      <extensionElements>
+        <activiti:formProperty id="name" name="&lt;b&gt;Please enter username&lt;/b&gt;" type="string"></activiti:formProperty>
+      </extensionElements>
     </userTask>
     <sequenceFlow id="flow3" sourceRef="usertask1" targetRef="scripttask1"></sequenceFlow>
   </process>
